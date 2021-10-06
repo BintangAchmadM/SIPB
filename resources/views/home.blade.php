@@ -2,7 +2,7 @@
 @section("container")   
     <h1>Tes</h1>
     @endsection  --}}
-// TES JANCOK KONTOL 
+ 
     <!doctype html>
 <html lang="en">
   <head>

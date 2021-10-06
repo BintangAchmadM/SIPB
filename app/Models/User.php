@@ -41,4 +41,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $table = 'users';
+
+    public function Pelaporan3()
+    {
+        return $this->hasMany('App/Pelaporan','FK_Id_user','id');
+    }
+
+    public function user_role()
+    {
+        return $this->hasMany('App/UserRole','FK_Id_user','id');
+    }
+
 }
