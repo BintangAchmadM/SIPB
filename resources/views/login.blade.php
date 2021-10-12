@@ -87,7 +87,7 @@ include("koneksi.php");
 			  <h3 style="color: #7a91d1;"><a href="index.php"><i class="glyphicon glyphicon-chevron-left"></i></a> Masuk</h3>
 				
 				
-				<form role="form" action="" method="post">
+				<form role="form">
 					<div class="form-group">
 						<label>Username</label>
 						<input type="text" name="username" maxlenght="10" class="form-control" placeholder="Username" required autofocus autocomplete="off"/>
@@ -98,7 +98,7 @@ include("koneksi.php");
 					</div>
 					
 					<div class="form-group">
-						<input type="submit" name="login" class="btn btn-primary btn-block" value="LOGIN" />
+						<a href ="{{ route('/home'); }}"><input type="submit" name="login" class="btn btn-primary btn-block" value="LOGIN" /><a>
 					</div>
 				</form>
 				<span>Belum punya akun?<a href="register.php">Klik disini</a></span>
