@@ -31,10 +31,8 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-
-					<li><a href="/">Home</a></li>
-					<li class="active"><a href="about.html">About</a></li>
-					
+					<li><a href='/'>Home</a></li>
+					<li><a href='about'>About</a></li>					
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -44,7 +42,7 @@
 							<li><a href="#">Dummy Link3</a></li>
 						</ul>
 					</li>
-					<li><a href='daftar'>Daftar Akun</a></li>
+					<li class="active"><a href='daftar'>Daftar Akun</a></li>
 					
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -65,36 +63,56 @@
 		<div class="row">
 			
 			<!-- Article main content -->
-			<article class="col-sm-8 maincontent">
+			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">About us</h1>
+					<h1 class="page-title">Contact us</h1>
 				</header>
-				<h3>Our Company</h3>
-				<p><img src="assets/images/about.jpg" alt="" class="img-rounded pull-right" width="300" > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.</p>
-				<p>Consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.</p>
-				<h3>Company Goals</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente. consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<h3>Team</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente. voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia voluptatem natus velit fugiat omnis rem eos sapiente quasi quaerat aspernatur quisquam deleniti accusantium laboriosam odio id?</p>
-				<h3>Public News</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente., consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.</p>
 				
+				<p>
+					We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
+				</p>
+				<br>
+					<form>
+						<div class="row">
+							<div class="col-sm-12">
+								<input class="form-control" type="text" placeholder="Name"><br/>
+							</div>
+							<div class="col-sm-12">
+								<input class="form-control" type="text" placeholder="Email ID"><br/>
+							</div>
+							<div class="col-sm-12">
+								<input class="form-control" type="text" placeholder="Phone No."><br/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-6">
+								<input class="btn btn-action pull-left" type="submit" value="Send message">
+							</div>
+							<div class="col-sm-6 text-right">
+								
+							</div>
+						</div>
+					</form>
+
 			</article>
 			<!-- /Article -->
 			
 			<!-- Sidebar -->
-			<aside class="col-sm-4 sidebar sidebar-right">
+			<aside class="col-sm-3 sidebar sidebar-right">
 
-				<div class="panel">
-					<h4>Latest News</h4>
-					<ul class="list-unstyled list-spaces">
-						<li><a href="">Responsive Design</a><br><span class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, laborum.</span></li>
-						<li><a href="">HTML5, CSS3 and JavaScript</a><br><span class="small text-muted">Consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam</span></li>
-						<li><a href="">Bootstrap</a><br><span class="small text-muted">Eveniet, consequuntur eius repellendus eos aliquid molestiae ea</span></li>
-						<li><a href="">Clean Template</a><br><span class="small text-muted">Sed, mollitia earum debitis est itaque esse reiciendis amet cupiditate.</span></li>
-						<li><a href="">Premium Quality</a><br><span class="small text-muted">Voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia.</span></li>
-					</ul>
+				<div class="panel contact">
+					<h4>Address</h4>
+					<ul>
+						  <li><i class="fa fa-phone"></i>1-123-345-6789</li>
+						  <li><a href="#"><i class="fa fa-envelope-o"></i> contact@webthemez.com</a></li>
+						  <li><i class="fa fa-flag"></i>123 Smith Drive, Baltimore, MD 21212</li>
+				   </ul> 
 				</div>
 
 			</aside>
@@ -103,7 +121,12 @@
 		</div>
 	</div>	<!-- /container -->
 	
-	<footer id="footer" class="top-space">
+	<section class="container-full top-space">		  
+		   <div id="map-canvas" style="width:100%;height:250px;"></div>
+	</section>
+
+	
+		<footer id="footer" class="top-space">
 
 		<div class="footer1">
 			<div class="container">
@@ -154,7 +177,7 @@
 							<p class="simplenav">
 								<a href="index.html">Home</a> | 
 								<a href="about.html">About</a> |
-								<a href="services.html">Service</a> |
+								<a href="services.html">Services</a> |
 								<a href="portfolio.html">Portfolio</a> |
 								<a href="contact.html">Contact</a> 
 							</p>
@@ -178,12 +201,17 @@
 
 
 
-
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/custom.js"></script>
+	
+	<!-- Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script src="assets/js/google-map.js"></script>
+	
+
 </body>
 </html>
