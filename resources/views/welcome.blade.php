@@ -3,9 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Atlanta is a modern and fully responsive Template by WebThemez.">
-	<meta name="author" content="webThemez.com">	
-	<title>Atlanta - Free business bootstrap template</title>
+	<meta name="description" content="Lancana">
+	<meta name="author" content="Lancana">
+	<link rel="icon" href="assets/images/lancanabig.png">		
+	<title>Lancana.id</title>
+
 	<link rel="favicon" href="assets/images/favicon.png">	
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -20,6 +22,7 @@
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 </head>
+
 <body>
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
@@ -27,7 +30,7 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Atlanta HTML5 template"></a>
+				<a class="navbar-brand" href='/'><img src="assets/images/lancana.png" widht="180" height="30"alt="Atlanta HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
@@ -43,6 +46,7 @@
 							<li><a href="#">Dummy Link3</a></li>
 						</ul>
 					</li>
+
 					<li><a href='daftar'>Daftar Akun</a></li>
 					
 				</ul>
@@ -50,32 +54,29 @@
 		</div>
 	</div> 
 	<!-- /.navbar -->
-
+	
+	
 	<!-- Header -->
 	<header id="head">
 	 <div class="container">
             <div class="banner-content">
                 <div id="da-slider" class="da-slider">
                     <div class="da-slide">
-                        <h2>Responsive Website</h2>
-                        <p>Amazing free responsive website for free, use it for your personal or commercial needs</p>
+                        <h2>Lapor Sigap</h2>
+                        <p>Anda Kena Bencana ? Lancana Solusinya</p>
                         <div class="da-img"></div>
                     </div>
                     <div class="da-slide">
                         <h2>Sistem Informasi Pelaporan Bencana</h2>
-                        <p>Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework.</p>
+                        <p>Solusi Informasi Bencana yang ada di Indonesia</p>
                         <div class="da-img"></div>
                     </div>
                     <div class="da-slide">
-                        <h2>HTML5/CSS3</h2>
-                        <p>HTML5 is a markup language used for structuring and presenting content for the World Wide Web.</p>
+                        <h2>Bencana Alam</h2>
+                        <p>Bencana Alam adalah.</p>
                         <div class="da-img"></div>
                     </div>
-                    <div class="da-slide">
-                        <h2>JavaScript/jQuery</h2>
-                        <p>jQuery: The Write Less, Do More, JavaScript Library.</p>
-                        <div class="da-img"></div>
-                    </div>
+                   
                     <nav class="da-arrows">
                         <span class="da-arrows-prev"></span>
                         <span class="da-arrows-next"></span>
@@ -89,16 +90,16 @@
 	<!-- Intro -->
 	<div class="container text-center">
 		<br> 
-		<h2 >Atlanta is a modern and fully responsive Template by WebThemez.</h2>
-		<p class="text-muted">
-			Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies<br/>
-			Sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.
-		</p>
+		<h2 >Lancana</h2>
+		<h2 class="text-muted">
+			Layanan Aspirasi dan Pengaduan Online Rakyat
+Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
+		</h2>
 	</div>
 	<!-- /Intro-->
 		
 	<!-- Highlights - jumbotron -->
-	<div class="jumbotron top-space">
+	{{--  <div class="jumbotron top-space">
 		<div class="container">
 			
 			<h3 class="text-center">Here is our core Services</h3>
@@ -163,18 +164,70 @@
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecat cupidatat non id est laborum.</p>
                 </div>
             </div>
-        </div>
-	<div class="container">
+        </div>  --}}
+	{{--  <div class="container">
 		<div class="jumbotron top-space">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque cursus erat vitae interdum. Nam vehicula, felis eu semper tincidunt, mauris risus ultricies dolor, a tristique arcu libero sit amet felis. Donec venenatis sed velit eget dignissim. Mauris tempor purus enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia do</p>
      		<p class="text-right"><a class="btn btn-primary btn-large">Learn more..</a></p>
-  		</div>
+  		</div>  --}}
+
+
+
+
+		  <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h3 class="thin text-center">SAMPAIKAN LAPORAN ANDA BRO !</h3>
+					<p class="text-center text-muted">Jangan Diam Jika Ditindas , Segera Laporkan ke Lancana ! </p>
+					<hr>
+					
+					<form>
+						<div class="top-margin">
+							<label>Judul Laporan Anda <span class="text-danger">*</span></label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="top-margin">
+							<label>Isi Laporan Anda Brow <span class="text-danger">*</span></label>
+							<input type="password" class="form-control">
+						</div>
+
+						<div class="top-margin">
+							<label>Isi Laporan Anda Brow <span class="text-danger">*</span></label>
+							<input type="password" class="form-control">
+						</div>
+						
+						<hr>
+
+						<div class="row">
+							<div class="col-lg-8">
+								<b><a href="">Forgot password?</a></b>
+							</div>
+							<div class="col-lg-4 text-right">
+								<button class="btn btn-action" type="submit">Sign in</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+		  
 
 </div>	<!-- /container -->
 	<div class="container">
   <div class="row">
     <div class='col-md-offset-2 col-md-8 text-center'>
-    <h2>Client Testimonial</h2>
+    <h2>Penilaian Penduduk</h2>
     </div>
   </div>
   <div class='row'>
@@ -198,8 +251,8 @@
                   <img class="img-circle" src="assets/images/person_1.png" style="width: 100px;height:100px;">
                 </div>
                 <div class="col-sm-9">
-                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
-                  <small>Someone famous</small>
+                  <p>Sangat mempermudah ketika kita ingin memastikan suatu tempat</p>
+                  <small>Yuk Sri</small>
                 </div>
               </div>
             </blockquote>
@@ -212,8 +265,8 @@
                   <img class="img-circle" src="assets/images/person_2.png" style="width: 100px;height:100px;">
                 </div>
                 <div class="col-sm-9">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
-                  <small>Someone famous</small>
+                  <p>Bisa mengetahui lokasi bencana yang baru terjadi</p>
+                  <small>Budi</small>
                 </div>
               </div>
             </blockquote>
@@ -226,8 +279,8 @@
                   <img class="img-circle" src="assets/images/person_3.png" style="width: 100px;height:100px;">
                 </div>
                 <div class="col-sm-9">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
-                  <small>Someone famous</small>
+                  <p>Ketika kita pulang dari kantor dan hujan deras, kita bisa mengetahui lokasi banjir dimana saja.</p>
+                  <small>Lek Kati</small>
                 </div>
               </div>
             </blockquote>
@@ -266,20 +319,20 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-5 panel">
-						<h3 class="panel-title">About Atlanta</h3>
+						<h3 class="panel-title">About Lancana</h3>
 						<div class="panel-body">
-							<p>Lorem ipsum dolor amet, consectetur adipiscing elit. Aenean leo lectus sollicitudin convallis eget libero. Aliquam laoreet tellus ut libero semper, egestas velit malesuada. Sed non risus eget dolor amet vestibulum ullamcorper. Integer feugiat molestie.</p> 
+							<p>ngoceh.</p> 
 						</div>
 					</div>
 
 					<div class="col-md-4 panel contact"> 
 						<h3 class="panel-title">Contact Info</h4>
 						<div class="panel-body">
-						<p>Lorem ipsum dolor amet, consectetur adipiscing ipsum dolor.</p>
+						<p>.</p>
 						<ul>
-						  <li><i class="fa fa-phone"></i>1-123-345-6789</li>
-						  <li><a href="#"><i class="fa fa-envelope-o"></i> contact@webthemez.com</a></li>
-						  <li><i class="fa fa-flag"></i>123 Smith Drive, Baltimore, MD 21212</li>
+						  <li><i class="fa fa-phone"></i> 0812-3418-9999</li>
+						  <li><a href="#"><i class="fa fa-envelope-o"></i> contact @anjay.gmail.com</a></li>
+						  <li><i class="fa fa-flag"></i> Gubeng Jaya</li>
 						</ul> 
 						</div>
 					</div>
@@ -309,11 +362,8 @@
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="simplenav">
-								<a href="index.html">Home</a> | 
-								<a href="about.html">About</a> |
-								<a href="services.html">Services</a> |
-								<a href="portfolio.html">Portfolio</a> |
-								<a href="contact.html">Contact</a> 
+								<a href='/'>Home</a> | 
+								<a href='about'>About</a> |
 							</p>
 						</div>
 					</div>
@@ -321,7 +371,7 @@
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="text-right">
-								Copyright &copy; 2014. Template by <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> 
+								Copyright &copy; 2021. 
 							</p>
 						</div>
 					</div>
@@ -345,4 +395,5 @@
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/custom.js"></script>
 </body>
+
 </html>
