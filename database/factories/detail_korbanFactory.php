@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\DetailKorban;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class userFactory extends Factory
+class detail_korbanFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model =User::class;
+    protected $model = DetailKorban::class;
 
     /**
      * Define the model's default state.
@@ -22,10 +22,11 @@ class userFactory extends Factory
     public function definition()
     {
         return [
-            'nama'=> $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'password' => $this->faker->password(20),
-            'tgl_lahir' => $this->faker->date(now()),
+            'NIK'=> $this->faker->nik(),
+            'Nama'=> $this->faker->name(),
+            'Umur'=> $this->faker->mt_rand(1,100),
+            'Kondisi'=> $this->faker->boolean(),
+            'FK_Id_laporan' => mt_rand(1,10)
         ];
     }
 }

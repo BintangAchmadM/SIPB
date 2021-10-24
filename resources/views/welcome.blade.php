@@ -40,7 +40,7 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-right.html">Right Sidebar</a></li>
+							<li><a href='artikel'>Artikel</a></li>
 							<li><a href="#">Dummy Link1</a></li>
 							<li><a href="#">Dummy Link2</a></li>
 							<li><a href="#">Dummy Link3</a></li>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="da-slide">
                         <h2>Bencana Alam</h2>
-                        <p>Bencana Alam adalah.</p>
+                        <p>Bencana Alam adalah peristiwa atau rangkaian peristiwa yang mengancam dan mengganggu kehidupan dan penghidupan masyarakat yang disebabkan, baik oleh faktor alam dan/atau faktor nonalam maupun faktor manusia sehingga mengakibatkan timbulnya korban jiwa manusia, kerusakan lingkungan, kerugian harta benda, dan dampak psikologis.</p>
                         <div class="da-img"></div>
                     </div>
                    
@@ -91,11 +91,13 @@
 	<div class="container text-center">
 		<br> 
 		<h2 >Lancana</h2>
-		<h2 class="text-muted">
+		<h3 class="text-muted">
 			Layanan Aspirasi dan Pengaduan Online Rakyat
 Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
-		</h2>
+		</h3>
 	</div>
+
+	<hr>
 	<!-- /Intro-->
 		
 	<!-- Highlights - jumbotron -->
@@ -177,33 +179,55 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 		  <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<h3 class="thin text-center">SAMPAIKAN LAPORAN ANDA BRO !</h3>
-					<p class="text-center text-muted">Jangan Diam Jika Ditindas , Segera Laporkan ke Lancana ! </p>
+					<h3 class="thin text-center">Lapor Sigap Bencana</h3>
+					<p class="text-center text-muted">Laporan anda sangat berguna bagi masyarakat sekitar  </p>
 					<hr>
 					
 					<form>
 						<div class="top-margin">
-							<label>Judul Laporan Anda <span class="text-danger">*</span></label>
-							<input type="text" class="form-control">
+							<label for="ketikJudulLaporanAnda">Ketik Judul Laporan Anda <span class="text-danger">*</span></label>
+							<input class="form-control" id="ketikJudulLaporanAnda" type="text" placeholder="Ketik Judul Laporan Anda" data-sb-validations="required" />
+							<div class="invalid-feedback" data-sb-feedback="ketikJudulLaporanAnda:required"></div>
+							
 						</div>
 						<div class="top-margin">
-							<label>Isi Laporan Anda Brow <span class="text-danger">*</span></label>
-							<input type="password" class="form-control">
+							<label for="ketikIsiLaporanAnda">Ketik Isi Laporan Anda <span class="text-danger">*</span></label>
+							<textarea class="form-control" id="ketikIsiLaporanAnda" type="text" placeholder="Ketik Isi Laporan Anda" style="height: 10rem;" data-sb-validations="required"></textarea>
+							
+							<div class="invalid-feedback" data-sb-feedback="ketikIsiLaporanAnda:required"></div>
+							
 						</div>
 
 						<div class="top-margin">
-							<label>Isi Laporan Anda Brow <span class="text-danger">*</span></label>
-							<input type="password" class="form-control">
+							<label for="tanggalKejadian">Tanggal Kejadian <span class="text-danger">*</span></label>
+							<input class="form-control" id="tanggalKejadian" type="text" placeholder="Tanggal Kejadian" data-sb-validations="required" />
+							
+							<div class="invalid-feedback" data-sb-feedback="tanggalKejadian:required"></div>
+					
 						</div>
 						
+						<div class="top-margin">
+							<label for="ketikJenisBencana">Ketik Jenis Bencana <span class="text-danger">*</span></label>
+							<input class="form-control" id="ketikJenisBencana" type="text" placeholder="Ketik Jenis Bencana" data-sb-validations="required" />
+							<div class="invalid-feedback" data-sb-feedback="ketikJenisBencana:required"></div>
+						</div>
+
+						<div class="top-margin">
+							<label for="ketikJenisBencana">Ketik Lokasi Kejadian <span class="text-danger">*</span></label>
+							<input class="form-control" id="ketikLokasiKejadian" type="text" placeholder="Ketik Lokasi Kejadian" data-sb-validations="required" />
+							<div class="invalid-feedback" data-sb-feedback="ketikLokasiKejadian:required"></div>
+						</div>
+
 						<hr>
 
 						<div class="row">
 							<div class="col-lg-8">
-								<b><a href="">Forgot password?</a></b>
+								<b><a href="">Upload Lampiran</a></b>
 							</div>
+							
 							<div class="col-lg-4 text-right">
-								<button class="btn btn-action" type="submit">Sign in</button>
+								<button class="btn btn-action" type="submit">Kirim</button>
+							</div>
 							</div>
 						</div>
 					</form>
@@ -211,11 +235,9 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 			</div>
 
 		</div>
+	
 
-
-
-
-
+		<hr>
 
 
 
@@ -328,12 +350,12 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 					<div class="col-md-4 panel contact"> 
 						<h3 class="panel-title">Contact Info</h4>
 						<div class="panel-body">
-						<p>.</p>
+						
+						<p>Hubungi kami .</p>
 						<ul>
-						  <li><i class="fa fa-phone"></i> 0812-3418-9999</li>
-						  <li><a href="#"><i class="fa fa-envelope-o"></i> contact @anjay.gmail.com</a></li>
-						  <li><i class="fa fa-flag"></i> Gubeng Jaya</li>
-						</ul> 
+						  <li><i class="fa fa-phone"></i>0812-3418-9999</li>
+						  <li><a href="#"><i class="fa fa-envelope-o"></i> lancana@gmail.com</a></li>
+						  <li><i class="fa fa-flag"></i>Gubeng Jaya</li>
 						</div>
 					</div>
 

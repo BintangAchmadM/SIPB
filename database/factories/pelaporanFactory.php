@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\Pelaporan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class userFactory extends Factory
+class pelaporanFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model =User::class;
+    protected $model = Pelaporan::class;
 
     /**
      * Define the model's default state.
@@ -22,10 +22,11 @@ class userFactory extends Factory
     public function definition()
     {
         return [
-            'nama'=> $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'password' => $this->faker->password(20),
-            'tgl_lahir' => $this->faker->date(now()),
+            'waktu_bencana'=> $this->faker->time(),
+            'status'=> $this->faker->boolean(),
+            'FK_Id_user' => mt_rand(1,10),
+            'FK_Id_bencana' => mt_rand(1,10),
+            'FK_Id_kecamatan' => mt_rand(1,10),
         ];
     }
 }

@@ -11,6 +11,6 @@ class Kategori_Bencana extends Model
 
     public function bencana()
     {
-        return $this->hasMany('App/Bencana','FK_Id_kategori_bencana','id_kateg_bencana');
+        return $this->hasMany(Bencana::class,'FK_Id_kategori_bencana','id_kateg_bencana');
     }
 }

@@ -3,16 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Atlanta is a modern and fully responsive Template by WebThemez.">
-	<meta name="author" content="webThemez.com">	
-	<title>Atlanta - Free business bootstrap template</title>
-	<link rel="favicon" href="assets/images/favicon.png">	
+	<meta name="description" content="">
+	<meta name="author"      content="webThemez.com">
+	
+	<link rel="icon" href="assets/images/lancanabig.png">		
+	<title>Lancana.id</title>
+	<link rel="favicon" href="assets/images/favicon.png">
+	
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/style.css">
+
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
@@ -27,23 +32,21 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Atlanta HTML5 template"></a>
+				<a class="navbar-brand" href='/'><img src="assets/images/lancana.png" widht="180" height="30" alt="Atlanta HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href='/'>Home</a></li>
-					<li><a href='about'>About</a></li>					
+					<li><a href='about'>About</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="sidebar-right.html">Right Sidebar</a></li>
-							<li><a href="#">Dummy Link1</a></li>
-							<li><a href="#">Dummy Link2</a></li>
-							<li><a href="#">Dummy Link3</a></li>
+							<li><a href="#">Left Sidebar</a></li>
+							<li><a href='artikel'>Artikel</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href='daftar'>Daftar Akun</a></li>
-					
+				
+					<li class="active"><a class="btn" href='login'>SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -56,77 +59,76 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li class="active">About</li>
+			<li><a href='/'>Home</a></li>
+			<li class="active">Registration</li>
 		</ol>
 
 		<div class="row">
 			
 			<!-- Article main content -->
-			<article class="col-sm-9 maincontent">
+			<article class="col-xs-12 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Contact us</h1>
+					<h1 class="page-title">Registration</h1>
 				</header>
 				
-				<p>
-					We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
-				</p>
-				<br>
-					<form>
-						<div class="row">
-							<div class="col-sm-12">
-								<input class="form-control" type="text" placeholder="Name"><br/>
-							</div>
-							<div class="col-sm-12">
-								<input class="form-control" type="text" placeholder="Email ID"><br/>
-							</div>
-							<div class="col-sm-12">
-								<input class="form-control" type="text" placeholder="Phone No."><br/>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-sm-6">
-								<input class="btn btn-action pull-left" type="submit" value="Send message">
-							</div>
-							<div class="col-sm-6 text-right">
-								
-							</div>
-						</div>
-					</form>
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h3 class="thin text-center">Register a new account</h3>
+							
+							<hr>
 
+							<form>
+								<div class="top-margin">
+									<label>First Name</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="top-margin">
+									<label>Last Name</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="top-margin">
+									<label>Email Address <span class="text-danger">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Password <span class="text-danger">*</span></label>
+										<input type="text" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Confirm Password <span class="text-danger">*</span></label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-lg-8">
+										<label class="checkbox">
+											<input type="checkbox"> 
+											I've read the <a href="#">Terms and Conditions</a>
+										</label>                        
+									</div>
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Daftar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				
 			</article>
 			<!-- /Article -->
-			
-			<!-- Sidebar -->
-			<aside class="col-sm-3 sidebar sidebar-right">
-
-				<div class="panel contact">
-					<h4>Address</h4>
-					<ul>
-						  <li><i class="fa fa-phone"></i>1-123-345-6789</li>
-						  <li><a href="#"><i class="fa fa-envelope-o"></i> contact@webthemez.com</a></li>
-						  <li><i class="fa fa-flag"></i>123 Smith Drive, Baltimore, MD 21212</li>
-				   </ul> 
-				</div>
-
-			</aside>
-			<!-- /Sidebar -->
 
 		</div>
 	</div>	<!-- /container -->
 	
-	<section class="container-full top-space">		  
-		   <div id="map-canvas" style="width:100%;height:250px;"></div>
-	</section>
-
-	
-		<footer id="footer" class="top-space">
+	<footer id="footer" class="top-space">
 
 		<div class="footer1">
 			<div class="container">
@@ -141,12 +143,12 @@
 					<div class="col-md-4 panel contact"> 
 						<h3 class="panel-title">Contact Info</h4>
 						<div class="panel-body">
-						<p>Lorem ipsum dolor amet, consectetur adipiscing ipsum dolor.</p>
-						<ul>
-						  <li><i class="fa fa-phone"></i>1-123-345-6789</li>
-						  <li><a href="#"><i class="fa fa-envelope-o"></i> contact@webthemez.com</a></li>
-						  <li><i class="fa fa-flag"></i>123 Smith Drive, Baltimore, MD 21212</li>
-						</ul> 
+							<p>Hubungi kami .</p>
+							<ul>
+							  <li><i class="fa fa-phone"></i>0812-3418-9999</li>
+							  <li><a href="#"><i class="fa fa-envelope-o"></i> lancana@gmail.com</a></li>
+							  <li><i class="fa fa-flag"></i>Gubeng Jaya</li>
+					
 						</div>
 					</div>
 
@@ -175,11 +177,9 @@
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="simplenav">
-								<a href="index.html">Home</a> | 
-								<a href="about.html">About</a> |
-								<a href="services.html">Services</a> |
-								<a href="portfolio.html">Portfolio</a> |
-								<a href="contact.html">Contact</a> 
+								<a href="#">Home</a> | 
+								<a href='about'>About</a> |
+								
 							</p>
 						</div>
 					</div>
@@ -187,7 +187,7 @@
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="text-right">
-								Copyright &copy; 2014. Template by <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> 
+								Copyright &copy; 2021.
 							</p>
 						</div>
 					</div>
@@ -207,11 +207,5 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/custom.js"></script>
-	
-	<!-- Google Maps -->
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-	<script src="assets/js/google-map.js"></script>
-	
-
 </body>
 </html>

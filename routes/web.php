@@ -35,5 +35,7 @@ Route::get('/daftar', function () {
     return view('daftar');
 });
 
- 
+Route::get('/artikel', function () {
+    return view('artikel');
+});
 

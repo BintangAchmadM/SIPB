@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\Bencana;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class userFactory extends Factory
+class bencanaFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model =User::class;
+    protected $model = Bencana::class;
 
     /**
      * Define the model's default state.
@@ -22,10 +22,8 @@ class userFactory extends Factory
     public function definition()
     {
         return [
-            'nama'=> $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'password' => $this->faker->password(20),
-            'tgl_lahir' => $this->faker->date(now()),
+            'Nama_Bencana'=> $this->faker->name(),
+            'FK_Id_kategori_bencana' => mt_rand(1,5)
         ];
     }
 }

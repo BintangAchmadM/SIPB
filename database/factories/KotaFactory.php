@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\Kota;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class userFactory extends Factory
+class kotaFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model =User::class;
+    protected $model = Kota::class;
 
     /**
      * Define the model's default state.
@@ -22,10 +22,7 @@ class userFactory extends Factory
     public function definition()
     {
         return [
-            'nama'=> $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'password' => $this->faker->password(20),
-            'tgl_lahir' => $this->faker->date(now()),
+            'nama_kota'=> $this->faker->city(),
         ];
     }
 }
