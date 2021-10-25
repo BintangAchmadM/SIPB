@@ -22,7 +22,7 @@ class kategori_bencanaFactory extends Factory
     public function definition()
     {
         return [
-            'Kategori_Bencana'=> $this->faker->sentence(5),
+            'Kategori_Bencana'=> $this->faker->word(),
         ];
     }
 }

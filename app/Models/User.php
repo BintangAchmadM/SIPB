@@ -8,16 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     use HasFactory;
-    protected $table = 'table_user';
+    protected $table = 'users';
 
     public function Pelaporan3()
     {
-        return $this->hasMany('App/Pelaporan','FK_Id_user','id');
+        return $this->hasMany(Pelaporan::class,'FK_Id_user','id');
     }
 
     public function user_role()
     {
-        return $this->hasMany('App/UserRole','FK_Id_user','id');
+        return $this->hasMany(UserRole::class,'FK_Id_user','id');
     }
 
 }

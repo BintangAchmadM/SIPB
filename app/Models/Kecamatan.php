@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kecamatan extends Model
 {
-
+    use HasFactory;
     protected $table = 'Kecamatan';
 
     public function kota()
     {
-        return $this->belongsTo('App/Kota','FK_ID_Kota','id_kecamatan');
+        return $this->belongsTo(Kota::class,'FK_ID_Kota','id_kecamatan');
     }
 
     public function Pelaporan()
     {
-        return $this->hasMany('App/Pelaporan','FK_Id_kecamatan','id_kecamatan');
+        return $this->hasMany(Pelaporan::class,'FK_Id_kecamatan','id_kecamatan');
     }
 }

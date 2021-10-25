@@ -12,7 +12,9 @@ class Role extends Model
 
     public function userRole()
     {
-        return $this->hasMany('App/UserRole','FK_Id_role','id_role');
+        return $this->hasMany(UserRole::class,'FK_Id_role','id_role');
     }
+
+    protected $fillable = ['role'];
 
 }

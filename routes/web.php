@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeConrtoller;
-
+use App\Http\Controllers\PelaporanController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -37,5 +42,11 @@ Route::get('/daftar', function () {
 
 Route::get('/artikel', function () {
     return view('artikel');
+
+
 });
+Route::resource('/pelaporan',PelaporanController::class);
+Route::resource('user',UserController::class);
+
+
 

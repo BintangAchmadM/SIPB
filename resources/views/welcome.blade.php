@@ -199,14 +199,6 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 						</div>
 
 						<div class="top-margin">
-							<label for="tanggalKejadian">Tanggal Kejadian <span class="text-danger">*</span></label>
-							<input class="form-control" id="tanggalKejadian" type="text" placeholder="Tanggal Kejadian" data-sb-validations="required" />
-							
-							<div class="invalid-feedback" data-sb-feedback="tanggalKejadian:required"></div>
-					
-						</div>
-						
-						<div class="top-margin">
 							<label for="ketikJenisBencana">Ketik Jenis Bencana <span class="text-danger">*</span></label>
 							<input class="form-control" id="ketikJenisBencana" type="text" placeholder="Ketik Jenis Bencana" data-sb-validations="required" />
 							<div class="invalid-feedback" data-sb-feedback="ketikJenisBencana:required"></div>
@@ -217,6 +209,25 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 							<input class="form-control" id="ketikLokasiKejadian" type="text" placeholder="Ketik Lokasi Kejadian" data-sb-validations="required" />
 							<div class="invalid-feedback" data-sb-feedback="ketikLokasiKejadian:required"></div>
 						</div>
+
+						<div class="top-margin">
+							<label for="tanggalKejadian">Tanggal Kejadian <span class="text-danger">*</span></label>
+							<input class="form-control" id="tanggalKejadian" type="text" placeholder="Tanggal Kejadian" data-sb-validations="required" />
+							
+							<div class="invalid-feedback" data-sb-feedback="tanggalKejadian:required"></div>
+					
+						</div>
+						
+						<div class="top-margin">
+							<label for="tanggalKejadian">Status Kejadian <span class="text-danger">*</span></label>
+							<input class="form-control" id="StatusKejadian" type="text" placeholder="Status Kejadian" data-sb-validations="required" />
+							
+							<div class="invalid-feedback" data-sb-feedback="StatusKejadian:required"></div>
+					
+						</div>
+						
+
+						
 
 						<hr>
 

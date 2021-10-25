@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kategori_Bencana extends Model
 {
+    use HasFactory;
     protected $table = 'kategori_bencana';
 
     public function bencana()

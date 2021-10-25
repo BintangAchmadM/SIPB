@@ -22,7 +22,7 @@ class userFactory extends Factory
     public function definition()
     {
         return [
-            'nama'=> $this->faker->name(),
+            'nama_user'=> $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => $this->faker->password(20),
             'tgl_lahir' => $this->faker->date(now()),
