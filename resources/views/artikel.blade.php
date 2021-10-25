@@ -38,10 +38,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Artikel</a></li>
-							<li><a href="#">Dummy Link1</a></li>
-							<li><a href="#">Dummy Link2</a></li>
-							<li><a href="#">Dummy Link3</a></li>
+							<li><a href='artikel'>Artikel</a></li>
+							<li><a href="#">Pencegahan</a></li>
+							<li><a href="#">Seputar Bencana Alam</a></li>
 						</ul>
 					</li>
 					
