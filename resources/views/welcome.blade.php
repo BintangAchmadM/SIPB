@@ -42,7 +42,7 @@
 						<ul class="dropdown-menu">
 							<li><a href='artikel'>Daftar Bencana</a></li>
 							<li><a href="#">Pencegahan</a></li>
-							<li><a href="#">Seputar Bencana Alam</a></li>
+							<li><a href="#">Histori Laporan</a></li>
 						
 						</ul>
 					</li>
@@ -85,6 +85,29 @@
             </div>
         </div>	
 	</header>
+
+	{{--  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="assets/images/kobong.png" class="d-block w-100" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="assets/images/banjir.png" class="d-block w-100" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="assets/images/gempa.png" class="d-block w-100" alt="...">
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>  --}}
+
 	<!-- /Header -->
 
 	<!-- Intro -->
@@ -183,7 +206,7 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 					<p class="text-center text-muted">Laporan anda sangat berguna bagi masyarakat sekitar  </p>
 					<hr>
 					
-					<form>
+					<form action = "{{ url('/insert_laporan') }}" method = "post">
 						<div class="top-margin">
 							<label for="ketikJudulLaporanAnda">Ketik Judul Laporan Anda <span class="text-danger">*</span></label>
 							<input class="form-control" id="ketikJudulLaporanAnda" type="text" placeholder="Ketik Judul Laporan Anda" data-sb-validations="required" />

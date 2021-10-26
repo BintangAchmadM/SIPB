@@ -42,9 +42,15 @@ Route::get('/daftar', function () {
 
 Route::get('/artikel', function () {
     return view('artikel');
-
-
 });
+
+Route::get('/history', function () {
+    return view('history');
+});
+
+Route::POST('/insert_laporan'.'App/Http/Controllers/PelaporanController@store');
+
+
 Route::resource('/pelaporan',PelaporanController::class);
 Route::resource('user',UserController::class);
 
