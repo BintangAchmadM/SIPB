@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori_Bencana;
+use App\Models\Kota;
 use Illuminate\Http\Request;
 
 class Kategori_Bencana_Controller extends Controller
@@ -22,9 +23,22 @@ class Kategori_Bencana_Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data = $request->input();
+        $katben = new Kategori_Bencana();
+        $katben->kategori_bencana   = $data['kategori_bencana'];
+        $katben->save();
+       
+
+        return redirect('cobaknampil');
+    }
+
+    public function cobatampil()
+    {
+        $a = Kategori_Bencana::all();
+        return view('cobaknampil', ['a'=>$a]);
+
     }
 
     /**
@@ -55,9 +69,10 @@ class Kategori_Bencana_Controller extends Controller
      * @param  \App\Models\Kategori_Bencana  $kategori_Bencana
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kategori_Bencana $kategori_Bencana)
+    public function edit($id)
     {
-        //
+        $item = Kategori_Bencana::find($id);
+        return view('nyobakedit', ['item'=>$item]);
     }
 
     /**
@@ -67,9 +82,14 @@ class Kategori_Bencana_Controller extends Controller
      * @param  \App\Models\Kategori_Bencana  $kategori_Bencana
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kategori_Bencana $kategori_Bencana)
+    public function update(Request $request,$id)
     {
-        //
+        $item = Kategori_Bencana::find($id)->where('id',$id)->update([
+            'id' => $request->id,
+            'Kategori_Bencana' => $request->Kategori_Bencana     
+
+        ]);
+            return redirect('cobaknampil');
     }
 
     /**
@@ -78,8 +98,10 @@ class Kategori_Bencana_Controller extends Controller
      * @param  \App\Models\Kategori_Bencana  $kategori_Bencana
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kategori_Bencana $kategori_Bencana)
+    public function destroy($id)
     {
-        //
+        $item = Kategori_Bencana::find($id);
+        $item->delete();
+        return redirect('cobaknampil');
     }
 }

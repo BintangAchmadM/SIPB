@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeConrtoller;
+use App\Http\Controllers\Kategori_Bencana_Controller;
 use App\Http\Controllers\PelaporanController;
 use App\Http\Controllers\UserController;
 /*
@@ -48,7 +49,27 @@ Route::get('/history', function () {
     return view('history');
 });
 
+Route::get('/cobak', function () {
+    return view('cobak');
+});
+
+//input data
+Route::POST('/create_kategori_bencana','App\Http\Controllers\Kategori_Bencana_Controller@create');
+
+//nampilno
+Route::get('/cobaknampil','App\Http\Controllers\Kategori_Bencana_Controller@cobatampil');
+
+//gusep
+Route::get('/destroy_kb/{id}','App\Http\Controllers\Kategori_Bencana_Controller@destroy');
+
+//edit
+Route::get('/editcobaknampil/{id}','App\Http\Controllers\Kategori_Bencana_Controller@edit');
+Route::POST('/proseseditcobaknampil/{id}','App\Http\Controllers\Kategori_Bencana_Controller@update');
+
+
+
 Route::POST('/insert_laporan'.'App/Http/Controllers/PelaporanController@store');
+
 
 
 Route::resource('/pelaporan',PelaporanController::class);

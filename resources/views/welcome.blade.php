@@ -86,27 +86,7 @@
         </div>	
 	</header>
 
-	{{--  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
-		  <div class="carousel-item active">
-			<img src="assets/images/kobong.png" class="d-block w-100" alt="...">
-		  </div>
-		  <div class="carousel-item">
-			<img src="assets/images/banjir.png" class="d-block w-100" alt="...">
-		  </div>
-		  <div class="carousel-item">
-			<img src="assets/images/gempa.png" class="d-block w-100" alt="...">
-		  </div>
-		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Next</span>
-		</button>
-	  </div>  --}}
+
 
 	<!-- /Header -->
 
@@ -123,78 +103,11 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 	<hr>
 	<!-- /Intro-->
 		
-	<!-- Highlights - jumbotron -->
-	{{--  <div class="jumbotron top-space">
-		<div class="container">
-			
-			<h3 class="text-center">Here is our core Services</h3>
-			
-			<div class="row">
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-arrows fa-2x circle"></i>Responsive Design</h4></div>
-					<div class="h-body text-center">
-						<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-css3 fa-2x circle"></i>HTML5/CSS3</h4></div>
-					<div class="h-body text-center">
-						<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-lightbulb-o fa-2x circle"></i>JavaScript jQuery</h4></div>
-					<div class="h-body text-center">
-						<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-desktop fa-2x circle"></i>Web Designing</h4></div>
-					<div class="h-body text-center">
-						<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-					</div>
-				</div>
-			</div> <!-- /row  -->
-		
-		</div>
-	</div>
+	
 	<!-- /Highlights -->
 
 	<!-- container -->
-	<div class="container">
-            <div class="heading text-center">
-                <!-- Heading -->
-                <h2>Our Company</h2>
-                <p>At lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
-            </div>
-            <div>                
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-            </div>
-            <div class="row iconColor">
-                <div class="col-md-4 col-sm-4">
-                    <h3><i class="fa fa-desktop color"></i>&nbsp; What we do?</h3>
-                    <!-- Paragraph -->
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecat cupidatat non id est laborum.</p>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <!-- Heading -->
-                    <h3><i class="fa fa-cloud color"></i>&nbsp;Why choose us?</h3>
-                    <!-- Paragraph -->
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecat cupidatat non id est laborum.</p>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <!-- Heading -->
-                    <h3><i class="fa fa-home color"></i>&nbsp;Where are we?</h3>
-                    <!-- Paragraph -->
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit occaecat cupidatat non id est laborum.</p>
-                </div>
-            </div>
-        </div>  --}}
-	{{--  <div class="container">
-		<div class="jumbotron top-space">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque cursus erat vitae interdum. Nam vehicula, felis eu semper tincidunt, mauris risus ultricies dolor, a tristique arcu libero sit amet felis. Donec venenatis sed velit eget dignissim. Mauris tempor purus enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia do</p>
-     		<p class="text-right"><a class="btn btn-primary btn-large">Learn more..</a></p>
-  		</div>  --}}
+	
 
 
 
