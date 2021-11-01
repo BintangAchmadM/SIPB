@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Bencana;
+use App\Models\Kecamatan;
 use App\Models\Pelaporan;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 class PelaporanController extends Controller
 {
     /**
@@ -14,7 +18,13 @@ class PelaporanController extends Controller
      */
     public function index()
     {
-        //
+        $bencana = Bencana::all();
+        $pelaporan = Pelaporan::all();
+
+        return view('histori', [
+           'pelaporan' => Pelaporan::all(),
+           
+        ]);
     }
 
     /**
@@ -24,7 +34,14 @@ class PelaporanController extends Controller
      */
     public function create()
     {
-        //
+        $bencana = Bencana::all();
+        $kecamatan = Kecamatan::all();
+
+        return view('welcome', [
+            'bencana' => $bencana,
+            'kecamatan' => $kecamatan,
+            
+        ]);
     }
 
     /**
@@ -35,7 +52,15 @@ class PelaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // // // DB::table('pelaporan')->insert([
+        // // // 'FK_id_bencana' => $request->id_bencana,
+        // // // 'FK_id_user' => $request->id_bencana,
+        // // // 'judul_laporan' => $request->judul_laporan, 
+        // // // 'isi_laporan' => $request->isi_laporan,
+        
+        // // ]);
+        
+        // return redirect('/lapor');
     }
 
     /**

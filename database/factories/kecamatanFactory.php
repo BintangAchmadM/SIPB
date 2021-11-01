@@ -23,6 +23,7 @@ class kecamatanFactory extends Factory
     {
         return [
             'Nama_Kecamatan'=> $this->faker->city(),
+            'FK_ID_KOTA' => mt_rand(1,5),
         ];
     }
 }

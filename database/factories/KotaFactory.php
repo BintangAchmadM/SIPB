@@ -22,7 +22,8 @@ class kotaFactory extends Factory
     public function definition()
     {
         return [
-            'nama_kota'=> $this->faker->cityname(),
+            'nama_kota'=> $this->faker->unique()->city(),
+            'FK_ID_PROVINSI' => mt_rand(1,5),
         ];
     }
 }

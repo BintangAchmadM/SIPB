@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bencana;
+use App\Models\Pelaporan;
 use App\Models\Provinsi;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,12 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-        //
+        $bencana = Bencana::all();
+        $pelaporan = Pelaporan::all();
+
+        return view('', [
+            'bencana' => $bencana,
+        ]);
     }
 
     /**

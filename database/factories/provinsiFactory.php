@@ -22,7 +22,7 @@ class provinsiFactory extends Factory
     public function definition()
     {
         return [
-            'nama_provinsi'=> $this->faker->province(),
+            'nama_provinsi'=> $this->faker->city(),
         ];
     }
 }

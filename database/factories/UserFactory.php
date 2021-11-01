@@ -12,7 +12,7 @@ class userFactory extends Factory
      *
      * @var string
      */
-    protected $model =User::class;
+    protected $model = User::class;
 
     /**
      * Define the model's default state.
@@ -24,8 +24,8 @@ class userFactory extends Factory
         return [
             'nama_user'=> $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'password' => $this->faker->password(20),
             'tgl_lahir' => $this->faker->date(now()),
+            'password' => $this->faker->password(20),
         ];
     }
 }

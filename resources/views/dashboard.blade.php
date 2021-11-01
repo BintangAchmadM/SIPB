@@ -14,7 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="index.html">Lancana</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -127,6 +127,9 @@
                                 <i class="fas fa-table me-1"></i>
                                 DataTable Example
                             </div>
+                            <div>
+                            <a href='/create'><button  class="btn btn-info">Tambah</button></a>
+                            </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
@@ -138,6 +141,7 @@
                                             <th>Password</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
+                                            <th>Opsi</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -149,22 +153,24 @@
                                             <th>Password</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
+                                            <th>Opsi</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        @foreach ($user as $item)
+                                       @foreach($user as $users)
                                         <tr>
-                                            <td>{{ $item->id }}</td>
-                                            <td>{{ $item->nama_user }}</td>
-                                            <td>{{ $item->email }}</td>
-                                            <td>{{ $item->tgl_lahir }}</td>
-                                            <td>{{ $item->password }}</td>
-                                            <td>{{ $item->created_at }}</td>
-                                            <td>{{ $item->updated_at }}</td>
+                                            <td>{{ $users->id }}</td>
+                                            <td>{{ $users->nama_user }}</td>
+                                            <td>{{ $users->email }}</td>
+                                            <td>{{ $users->tgl_lahir }}</td>
+                                            <td>{{ $users->password }}</td>
+                                            <td>{{ $users->created_at }}</td>
+                                            <td>{{ $users->updated_at }}</td>
+                                            <td></td>
                                         </tr>
-                                        
                                         @endforeach
                                        
+                                      
                                    
                                     </tbody>
                                 </table>
@@ -188,7 +194,7 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crosso rigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>

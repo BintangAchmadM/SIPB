@@ -41,9 +41,8 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
+							<li><a href="#">Left Sidebar</a></li>
 							<li><a href='artikel'>Artikel</a></li>
-							<li><a href="#">Pencegahan</a></li>
-							<li><a href="#">Seputar Bencana Alam</a></li>
 						</ul>
 					</li>
 				
@@ -79,29 +78,26 @@
 							
 							<hr>
 
-							<form>
+							<form action = "{{ url ('/register') }}" method="POST">
+								@csrf
 								<div class="top-margin">
-									<label>First Name</label>
-									<input type="text" class="form-control">
+									<label>Name</label>
+									<input type="text" class="form-control" name="nama_user">
 								</div>
 								<div class="top-margin">
-									<label>Last Name</label>
-									<input type="text" class="form-control">
+									<label>Date of Birth</label>
+									<input class="form-control" type="text" name="tgl_lahir" placeholder="Date of Birth" onfocus="(this.type='date')" required/>
 								</div>
 								<div class="top-margin">
 									<label>Email Address <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="email">
 								</div>
 
-								<div class="row top-margin">
-									<div class="col-sm-6">
+								<div class="top-margin">
+									
 										<label>Password <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="col-sm-6">
-										<label>Confirm Password <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
-									</div>
+										<input type="password" class="form-control" name="password">
+								
 								</div>
 
 								<hr>
@@ -208,5 +204,6 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/custom.js"></script>
+	
 </body>
 </html>

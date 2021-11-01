@@ -38,9 +38,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href='artikel'>Artikel</a></li>
+							<li><a href='artikel'>Daftar Bencana</a></li>
 							<li><a href="#">Pencegahan</a></li>
-							<li><a href="#">Seputar Bencana Alam</a></li>
+							<li><a href='histori'>Histori Laporan</a></li>
 						</ul>
 					</li>
 					
@@ -58,43 +58,46 @@
 
 		<ol class="breadcrumb">
 			<li><a href='/'>Home</a></li>
-			<li class="active">Artikel</li>
+			<li class="active">Daftar Bencana</li>
 		</ol>
+<div class="row icon-boxes">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
 
-		<div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-palette-line"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-command-line"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-fingerprint-line"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          </div>
+        </div>
+
 			
-			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Cuaca Terik Dirasakan di Surabaya dan Sekitarnya, Ini Penjelasan BMKG.</h1>
-				</header>
-				<div class="row panel">
-					<div class="col-xs-12">
-						<p><img src="assets/images/panas ges.jpg" width="800" height="390" alt=""></p>
-						
-					</div>
-				<p>Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) Juanda menjelaskan penyebab suhu udara di wilayah Jawa Timur yang cukup tinggi beberapa waktu belakangan.
-
-					Dalam keterangan video di akun Twitter resmi BMKG Juanda dilansir Sabtu (23/10/2021), dijelaskan bahwa wilayah Jawa Timur baru saja melewati fase Kulminasi. Sehingga posisi matahari saat ini masih berada di sekitar garis ekuator.
-					
-					Akibatnya, di wilayah Jawa Timur dan sekitarnya masih mendapat surplus penyinaran matahari yang cukup intens..</p>
-				<p> Kulminasi adalah fenomena ketika matahari tepat berada di posisi paling tinggi di langit. Saat deklinasi matahari sama dengan lintang pengamat, fenomenanya disebut sebagai kulminasi utama.
-
-					Pada saat itu, matahari akan tepat berada di atas kepala pengamat atau di titik zenit. Akibatnya, bayangan benda tegak akan terlihat “menghilang”, karena bertumpuk dengan benda itu sendiri.
-					
-					Selain pengaruh kulminasi, BMKG Juanda juga menerangkan, saat ini tutupan awan masih sedikit sehingga suhu matahari dirasakan terasa sangat terik di siang hari.</p>
-				<p> Namun ini akan berkurang di sore hari seiring bergeraknya poisisi matahari ke belahan bumi selatan.
-
-					BMKG juga memprediksi di wilayah Surabaya dan sekitarnya akan memasuki awal musim penghujan di Bulan November.
-					
-					Dalam suhu maksimum harian di Indonesia periode 21 Oktober pukul 07.00 WIB-22 Oktober 2021 pukul 07.00 WIB, BMKG mencatat suhu tertinggi dilaporkan oleh Stasiun Meteorologi Gewayantana Nusa Tenggara Timur dengan suhu maksimal 37,4 derajat.
-					
-					Sementara Stasiun Meteorologi Juanda Sidoarjo mencatat suhu maksimal sebesar 35,4 derajat.</p>
-				
-				
-			</article>
+		
+		
 			<!-- /Article -->
-			{{-- 
+{{-- 			
 			<!-- Sidebar -->
 			<aside class="col-md-4 sidebar sidebar-right">
 
@@ -110,11 +113,13 @@
 						<p><img src="assets/images/1.jpg" alt=""></p>
 						<p>Morbi vitae diam felis. Mauris vulputate nisi erat, adipiscing pretium lacus lacinia quis. Sed consectetur ipsum.</p>
 					</div>
-				</div>
+				</div> --}}
 
 			</aside>
-			<!-- /Sidebar -->
---}}
+			
+	<!--manual navigation end-->
+  </div>
+  <!--image slider end-->
 		</div>
 	</div>	<!-- /container -->
 	

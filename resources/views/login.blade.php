@@ -77,15 +77,18 @@
 							<h3 class="thin text-center">Sign in to your account</h3>
 							
 							<hr>
-							
-							<form>
+							@error('email')
+								<small>{{ $message }}</small>
+							@enderror
+							<form action="/postlogin" method="post">
+								@csrf
 								<div class="top-margin">
 									<label>Username/Email <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<input type="email" class="form-control" name="email">
 								</div>
 								<div class="top-margin">
 									<label>Password <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
+									<input type="password" class="form-control" name="password">
 								</div>
 
 								<hr>

@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeConrtoller;
-use App\Http\Controllers\Kategori_Bencana_Controller;
 use App\Http\Controllers\PelaporanController;
+use App\Http\Controllers\Table_UserController;
 use App\Http\Controllers\UserController;
+use App\Models\Pelaporan;
+use App\Http\Controllers\LoginController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,20 +21,10 @@ use App\Http\Controllers\UserController;
 */
 
 //ROUTES DASAR
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/', [PelaporanController::class, 'create']);
 
 Route::get('/about', function () {
     return view('about');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
 });
 
 Route::get('/login', function () {
@@ -45,35 +39,25 @@ Route::get('/artikel', function () {
     return view('artikel');
 });
 
-Route::get('/history', function () {
-    return view('history');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
 
-Route::get('/cobak', function () {
-    return view('cobak');
+Route::get('/createuser', function () {
+    return view('createuser');
 });
 
-//input data
-Route::POST('/create_kategori_bencana','App\Http\Controllers\Kategori_Bencana_Controller@create');
+Route::get('/histori', [PelaporanController::class, 'index']) ;
 
-//nampilno
-Route::get('/cobaknampil','App\Http\Controllers\Kategori_Bencana_Controller@cobatampil');
+Route::get('/dashboard',[UserController::class,'index']);
 
-//gusep
-Route::get('/destroy_kb/{id}','App\Http\Controllers\Kategori_Bencana_Controller@destroy');
+Route::post('/register', [UserController::class, 'store']) ;
 
-//edit
-Route::get('/editcobaknampil/{id}','App\Http\Controllers\Kategori_Bencana_Controller@edit');
-Route::POST('/proseseditcobaknampil/{id}','App\Http\Controllers\Kategori_Bencana_Controller@update');
+Route::post('/postlogin', [LoginController::class, 'authenticate']) ;
 
+Route::post('/lapor', [PelaporanController::class, 'store']) ;
 
+Route::get('/create',[UserController::class,'show_create']);
 
-Route::POST('/insert_laporan'.'App/Http/Controllers/PelaporanController@store');
-
-
-
-Route::resource('/pelaporan',PelaporanController::class);
-Route::resource('user',UserController::class);
-
-
+Route::POST('/createe',[UserController::class,'create']);
 

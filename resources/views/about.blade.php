@@ -40,9 +40,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href='artikel'>Artikel</a></li>
+							<li><a href='artikel'>Daftar Bencana</a></li>
 							<li><a href="#">Pencegahan</a></li>
-							<li><a href="#">Seputar Bencana Alam</a></li>
+							<li><a href='histori'>Histori Laporan</a></li>
 						</ul>
 					</li>
 					<li><a href='daftar'>Daftar Akun</a></li>
