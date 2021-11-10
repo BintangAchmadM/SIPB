@@ -51,6 +51,8 @@ Route::get('/histori', [PelaporanController::class, 'index']) ;
 
 Route::get('/dashboard',[UserController::class,'index']);
 
+Route::get('/dashboardhistori',[PelaporanController::class,'histori']);
+
 Route::post('/register', [UserController::class, 'store']) ;
 
 Route::post('/postlogin', [LoginController::class, 'authenticate']) ;
@@ -60,4 +62,8 @@ Route::post('/lapor', [PelaporanController::class, 'store']) ;
 Route::get('/create',[UserController::class,'show_create']);
 
 Route::POST('/createe',[UserController::class,'create']);
+
+Route::delete('/dashboard/delete/{id}',[UserController::class,'destroy']);
+
+Route::delete('/dashboardhistori/delete/{id}',[PelaporanController::class,'destroy']);
 

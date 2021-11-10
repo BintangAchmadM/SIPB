@@ -46,5 +46,13 @@ class UserController extends Controller
         return view('createuser');
 
     }
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect('/dashboard');
+    }
 }
+
 

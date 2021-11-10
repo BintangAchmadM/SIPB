@@ -6,7 +6,7 @@ use App\Models\Bencana;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class bencanaFactory extends Factory
-{
+{   
     /**
      * The name of the factory's corresponding model.
      *

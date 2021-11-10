@@ -22,6 +22,17 @@ class PelaporanController extends Controller
         $pelaporan = Pelaporan::all();
 
         return view('histori', [
+           'pelaporan' => Pelaporan::with('bencana','kecamatan')->get(),
+           
+        ]);
+    }
+
+    public function histori()
+    {
+        $bencana = Bencana::all();
+        $pelaporan = Pelaporan::all();
+
+        return view('dashboardhistori', [
            'pelaporan' => Pelaporan::all(),
            
         ]);
@@ -52,15 +63,17 @@ class PelaporanController extends Controller
      */
     public function store(Request $request)
     {
-        // // // DB::table('pelaporan')->insert([
-        // // // 'FK_id_bencana' => $request->id_bencana,
-        // // // 'FK_id_user' => $request->id_bencana,
-        // // // 'judul_laporan' => $request->judul_laporan, 
-        // // // 'isi_laporan' => $request->isi_laporan,
+        DB::table('pelaporan')->insert([
+        'FK_id_bencana' => $request->id_bencana,
+        'FK_id_user' => $request->id_bencana,
+        'judul_laporan' => $request->judul_laporan, 
+        'isi_laporan' => $request->isi_laporan,
+        'FK_id_kecamatan' => $request->id_bencana,
+        'waktu_bencana' => $request ->waktu,
+        'status' => 0,
+        ]);
         
-        // // ]);
-        
-        // return redirect('/lapor');
+        return redirect('/histori');
     }
 
     /**
@@ -103,8 +116,11 @@ class PelaporanController extends Controller
      * @param  \App\Models\Pelaporan  $pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pelaporan $pelaporan)
+    public function destroy($id)
     {
-        //
+        $pelaporan = Pelaporan::find($id);
+        $pelaporan->delete();
+
+        return redirect('/dashboardhistori');
     }
 }

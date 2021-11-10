@@ -1,60 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Lancana">
-	<meta name="author" content="Lancana">
-	<link rel="icon" href="assets/images/lancanabig.png">		
-	<title>Lancana.id</title>
 
-	<link rel="favicon" href="assets/images/favicon.png">	
-	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" type="text/css" href="assets/css/da-slider.css" />
-	<link rel="stylesheet" href="assets/css/style.css">
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
-</head>
+@extends('layout.main')
 
-<body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href='/'><img src="assets/images/lancana.png" widht="180" height="30"alt="Atlanta HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href = 'about'>About</a></li>
-                    
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href='artikel'>Daftar Bencana</a></li>
-							<li><a href="#">Pencegahan</a></li>
-							<li><a href='histori'>Histori Laporan</a></li>
-						
-						</ul>
-					</li>
-
-					<li><a href='daftar'>Daftar Akun</a></li>
-					
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
-	
+@section('container')
 	
 	<!-- Header -->
 	<header id="head">
@@ -206,7 +153,7 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 					<p class="text-center text-muted">Laporan anda sangat berguna bagi masyarakat sekitar  </p>
 					<hr>
 					
-					<form action = "{{ url('/lapor') }}" method = "POST">
+					<form action = '/lapor' method ="post">
 						@csrf
 						<div class="top-margin">
 							<label for="ketikJudulLaporanAnda">Ketik Judul Laporan Anda <span class="text-danger">*</span></label>
@@ -245,6 +192,14 @@ Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
 						<div class="top-margin">
 							<label for="tanggalKejadian">Tanggal Kejadian <span class="text-danger">*</span></label>
 							<input class="form-control" type="text" name="tanggal" placeholder="Tanggal Kejadian" onfocus="(this.type='date')" required/>
+							
+						
+					
+						</div>
+
+						<div class="top-margin">
+							<label for="tanggalKejadian">Waktu Kejadian <span class="text-danger">*</span></label>
+							<input class="form-control" type="time" name="waktu" placeholder="Tanggal Kejadian"  required/>
 							
 						
 					

@@ -14,7 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href='/'>Lancana</a>
+            <a class="navbar-brand ps-3" href="index.html">Lancana</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -56,7 +56,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href='/' >Home</a>
-                                    <a class="nav-link" href='dashboardhistori' >Histori</a>
+                                    <a class="nav-link" href='histori' >Histori</a>
                                     {{-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> --}}
                                 </nav>
                             </div>
@@ -114,7 +114,7 @@
                         <h1 class="mt-4">Tables</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href='/'>Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item active">Tables Histori</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
@@ -136,12 +136,11 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
-                                            <th>Tgl Lahir</th>
-                                            <th>Password</th>
-                                            <th>Created at</th>
-                                            <th>Updated at</th>
+                                            <th>Judul</th>
+                                            <th>Bencana</th>
+                                            <th>Kecamatan</th>
+                                            <th>Tanggal</th>
+                                            <th>Isi</th>
                                             <th>Opsi</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
@@ -150,30 +149,29 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
-                                            <th>Tgl Lahir</th>
-                                            <th>Password</th>
-                                            <th>Created at</th>
-                                            <th>Updated at</th>
+                                            <th>Judul</th>
+                                            <th>Bencana</th>
+                                            <th>Kecamatan</th>
+                                            <th>Tanggal</th>
+                                            <th>Isi</th>
+                                            <th>Opsi</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                       @foreach($user as $users)
+                                       @foreach($pelaporan as $pelaporans)
                                         <tr>
-                                            <td>{{ $users->id }}</td>
-                                            <td>{{ $users->nama_user }}</td>
-                                            <td>{{ $users->email }}</td>
-                                            <td>{{ $users->tgl_lahir }}</td>
-                                            <td>{{ $users->password }}</td>
-                                            <td>{{ $users->created_at }}</td>
-                                            <td>{{ $users->updated_at }}</td>
-                                            <td><a href="{{ url('') }}{{ $users->id }}"><button class="btn btn-info btn-block" type="submit">Show</button></a></td>
+                                            <th> {{ $pelaporans ->id}}</th>
+                                            <td> {{ $pelaporans ->judul_laporan}}</td>
+                                            <td> {{ $pelaporans ->bencana ->Nama_bencana}} </td>
+                                            <td> {{ $pelaporans ->kecamatan ->Nama_Kecamatan }}</td>
+                                            <td> {{ $pelaporans ->waktu_bencana }}</td>
+                                            <td> {{ $pelaporans ->isi_laporan }}</td>
+                                            <td><a href="{{ url('') }}{{ $pelaporans->id }}"><button class="btn btn-info btn-block" type="submit">Show</button></a></td>
                                             <td><button class="btn btn-warning btn-block" type="submit">Edit</button></td>
                                             <td>
-                                                <form action="/dashboard/delete/{{ $users->id }}" method="POST">
+                                                <form action="/dashboardhistori/delete/{{ $pelaporans->id }}" method="POST">
                                                     @method('delete')
                                                     @csrf
                                                     <button class="btn btn-danger btn-block" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" type="submit">Hapus</button>
