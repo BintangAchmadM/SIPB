@@ -14,7 +14,10 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboardview.table-role', [
+            'role' => Role::all(),
+            'title' => 'Role'
+         ]);
     }
 
     /**

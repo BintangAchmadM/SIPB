@@ -22,8 +22,8 @@ class bencanaFactory extends Factory
     public function definition()
     {
         return [
-            'Nama_Bencana'=> $this->faker->name(),
-            'FK_Id_kategori_bencana' => mt_rand(1,5)
+            'Nama_Bencana'=> $this->faker->word(),
+            'FK_Id_kategori_bencana' => mt_rand(1,2)
         ];
     }
 }

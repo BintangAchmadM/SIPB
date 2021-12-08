@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -79,8 +80,8 @@ class DashboardController extends Controller
      */
     public function destroy($id)
     {
-        Users::destroy ($users->id);
-        return redirect( 'dashboard/delete') -> with('berhasil');
+        User::destroy ($id);
+        return redirect( 'dashboard') -> with('berhasil');
 
     }
 }

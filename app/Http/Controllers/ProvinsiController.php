@@ -16,11 +16,10 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-        $bencana = Bencana::all();
-        $pelaporan = Pelaporan::all();
 
-        return view('', [
-            'bencana' => $bencana,
+        return view('dashboardview.table-provinsi', [
+            'province' => Provinsi::all(),
+            'title' => 'Provinsi'
         ]);
     }
 
@@ -76,7 +75,7 @@ class ProvinsiController extends Controller
      */
     public function update(Request $request, Provinsi $provinsi)
     {
-        //
+        
     }
 
     /**
@@ -89,4 +88,13 @@ class ProvinsiController extends Controller
     {
         //
     }
+
+    public function show_edit($id){
+        // dd(User::findOrFail($id));
+        return view ( 'edituser', [
+            'user'=> Pelaporan::findOrFail($id)
+            // 'user'=> User::where('id',$id)->get()
+            
+        ]);
+}
 }

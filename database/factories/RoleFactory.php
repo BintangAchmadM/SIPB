@@ -22,7 +22,7 @@ class roleFactory extends Factory
     public function definition()
     {
         return [
-            'role' => mt_rand(1,2),
+            'role' => $this->faker->word(),
         ];
     }
 }

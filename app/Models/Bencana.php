@@ -13,7 +13,7 @@ class Bencana extends Model
 
     public function kategori_bencana()
     {
-        return $this->belongsTo('App/Kategori_Bencana','FK_Id_kategori_bencana','id_bencana');
+        return $this->belongsTo(Kategori_Bencana::class,'FK_Id_kategori_bencana','id');
     }
 
     public function Pelaporan2()
