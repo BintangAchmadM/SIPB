@@ -62,21 +62,17 @@ Route::get('/createuser', function () {
     return view('createuser');
 });
 
-Route::get('/laporan', [PelaporanController::class, 'create']);
 
-Route::get('/histori', [PelaporanController::class, 'index2']) ;
-
-Route::get('/dashboard',[UserController::class,'index']);
-
-Route::get('/dashboardhistori',[PelaporanController::class,'histori']);
-
-Route::post('/register', [UserController::class, 'store']) ;
+// -------------------------Login--------------------------------
 
 Route::post('/login', [LoginController::class, 'authenticate']) ;
 
 Route::post('/logout', [LoginController::class, 'logout']) ;
 
-Route::post('/lapor', [PelaporanController::class, 'store']) ;
+// -------------------------User--------------------------------
+Route::post('/register', [UserController::class, 'store']) ;
+
+Route::get('/dashboard',[UserController::class,'index']);
 
 Route::get('/create',[UserController::class,'show_create']);
 
@@ -86,11 +82,20 @@ Route::get ('/edituser/{id}',[UserController::class,'show_edit']);
 
 Route::put ('/updateuser/{id}',[UserController::class,'update']);
 
+Route::delete('/dashboard/delete/{id}',[UserController::class,'destroy']);
+
+// -------------------------Pelaporan--------------------------------
+Route::get('/histori', [PelaporanController::class, 'index2']) ;
+
+Route::get('/dashboardhistori',[PelaporanController::class,'histori']);
+
+Route::post('/lapor', [PelaporanController::class, 'store']) ;
+
+Route::get('/laporan', [PelaporanController::class, 'create']);
+
 Route::get ('/histori-{id}',[PelaporanController::class,'edit']);
 
 Route::put ('/edithistori/{id}',[PelaporanController::class,'update']);
-
-Route::delete('/dashboard/delete/{id}',[UserController::class,'destroy']);
 
 Route::delete('/dashboardhistori/delete/{id}',[PelaporanController::class,'destroy']);
 

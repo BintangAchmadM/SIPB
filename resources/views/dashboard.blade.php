@@ -118,7 +118,7 @@
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                               ............
+                               
                                
                                 .
                             </div>
@@ -126,7 +126,7 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Data Tabel
+                                Data Akun
                             </div>
                             <div>
                             <a href='/create'><button  class="btn btn-info">Tambah</button></a>
@@ -139,7 +139,7 @@
                                             <th>Nama</th>
                                             <th>Email</th>
                                             <th>Tgl Lahir</th>
-                                            <th>Password</th>
+                                            
                                             <th>Created at</th>
                                             <th>Updated at</th>
                                             <th>Opsi</th>
@@ -148,17 +148,7 @@
                                         </tr>
                                     </thead>
                                     <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
-                                            <th>Tgl Lahir</th>
-                                            <th>Password</th>
-                                            <th>Created at</th>
-                                            <th>Updated at</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
-                                        </tr>
+                                        
                                     </tfoot>
                                     <tbody>
                                        @foreach($user as $users)
@@ -167,11 +157,12 @@
                                             <td>{{ $users->nama_user }}</td>
                                             <td>{{ $users->email }}</td>
                                             <td>{{ $users->tgl_lahir }}</td>
-                                            <td>{{ $users->password }}</td>
+                                            
                                             <td>{{ $users->created_at }}</td>
                                             <td>{{ $users->updated_at }}</td>
-                                            <td><a href="{{ url('') }}{{ $users->id }}"><button class="btn btn-info btn-block" type="submit">Show</button></a></td>
-                                            <td><button class="btn btn-warning btn-block" type="submit">Edit</button></td>
+                                            <td><a href="{{ url('create/') }}{{ $users->id }}"><button class="btn btn-info btn-block" type="submit">Show</button></a></td>
+                                            <td><a href="{{ url('edituser') }}{{ '/' }}{{ $users->id }}"><button class="btn btn-warning btn-block" type="submit">Edit</button></td>
+
                                             <td>
                                                 <form action="/dashboard/delete/{{ $users->id }}" method="POST">
                                                     @method('delete')

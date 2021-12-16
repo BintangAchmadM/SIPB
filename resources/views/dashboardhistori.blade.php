@@ -168,8 +168,8 @@
                                             <td> {{ $pelaporans ->kecamatan ->Nama_Kecamatan }}</td>
                                             <td> {{ $pelaporans ->waktu_bencana }}</td>
                                             <td> {{ $pelaporans ->isi_laporan }}</td>
-                                            <td><a href="{{ url('') }}{{ $pelaporans->id }}"><button class="btn btn-info btn-block" type="submit">Show</button></a></td>
-                                            <td><button class="btn btn-warning btn-block" type="submit">Edit</button></td>
+                                            <td><a href="{{ url('create/') }}{{ $pelaporans->id }}"><button class="btn btn-info btn-block" type="submit">Show</button></a></td>
+		                                    <td><a href="{{ url('edithistori') }}{{ '/' }}{{ $pelaporans->id }}"><button class="btn btn-warning btn-block" type="submit">Edit</button></td>
                                             <td>
                                                 <form action="/dashboardhistori/delete/{{ $pelaporans->id }}" method="POST">
                                                     @method('delete')

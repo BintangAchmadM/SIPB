@@ -6,61 +6,36 @@
 	<meta name="description" content="">
 	<meta name="author"      content="webThemez.com">
 	
-	<link rel="icon" href="assets/images/lancanabig.png">		
+	<link rel="icon" href="{{ asset('assets/images/lancanabig.png') }}">		
 	<title>Lancana.id</title>
-	<link rel="favicon" href="assets/images/favicon.png">
+	<link rel="favicon" href="{{ asset('assets/images/favicon.png') }}">
 	
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
 
 	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap-theme.css') }}" media="screen" >
+	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
+	<script src="{{ asset('assets/js/html5shiv.js') }}"></script>
+	<script src="{{ asset('assets/js/respond.min.js') }}"></script>
 	<![endif]-->
 </head>
 
 <body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href='/'><img src="assets/images/lancana.png" widht="180" height="30" alt="Atlanta HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a href='/'>Home</a></li>
-					<li><a href='about'>About</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Left Sidebar</a></li>
-							<li><a href='artikel'>Artikel</a></li>
-						</ul>
-					</li>
-				
-					<li class="active"><a class="btn" href='login'>SIGN IN / SIGN UP</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
 
-	<header id="head" class="secondary"></header>
+
+	{{-- <header id="head" class="secondary"></header> --}}
 
 	<!-- container -->
 	<div class="container">
 
 		<ol class="breadcrumb">
 			<li><a href='/'>Home</a></li>
-			<li class="active">Registration</li>
+			<li class="active">Edit</li>
 		</ol>
 
 		<div class="row">
@@ -68,49 +43,38 @@
 			<!-- Article main content -->
 			<article class="col-xs-12 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Registration</h1>
+					<h1 class="page-title">Edit User</h1>
 				</header>
 				
 				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<h3 class="thin text-center">Register a new account</h3>
+							<h3 class="thin text-center">Edit User</h3>
 							
 							<hr>
 
-							<form action = "{{ url ('/register') }}" method="POST">
+							<form action = "/updateuser/{{ $user->id }}" method="POST">
+								@method("put")
 								@csrf
 								<div class="top-margin">
 									<label>Name</label>
-									<input type="text" class="form-control" name="nama_user">
+									{{-- <input type="text" class="form-control" name="nama_user" value="{{ old($user->nama_user) }}"> --}}
+									<input type="text" class="form-control" name="nama_user" value="{{ $user->nama_user }}">
 								</div>
 								<div class="top-margin">
 									<label>Date of Birth</label>
-									<input class="form-control" type="text" name="tgl_lahir" placeholder="Date of Birth" onfocus="(this.type='date')" required/>
+									{{-- <input class="form-control" type="text" name="tgl_lahir" value="{{ old($user->tgl_lahir)}}" placeholder="Date of Birth" onfocus="(this.type='date')" required /> --}}
+									<input class="form-control" type="text" name="tgl_lahir" value="{{ $user->tgl_lahir }}" placeholder="Date of Birth" onfocus="(this.type='date')" required />
 								</div>
 								<div class="top-margin">
 									<label>Email Address <span class="text-danger">*</span></label>
-									<input type="text" class="form-control" name="email">
+									{{-- <input type="text" class="form-control" name="email" value="{{ old($user->email) }} "> --}}
+									<input type="text" class="form-control" name="email" value="{{ $user->email }} ">
 								</div>
-
-								<div class="top-margin">
-									
-										<label>Password <span class="text-danger">*</span></label>
-										<input type="password" class="form-control" name="password">
-								
-								</div>
-
 								<hr>
-
 								<div class="row">
-									<div class="col-lg-8">
-										<label class="checkbox">
-											<input type="checkbox"> 
-											I've read the <a href="#">Terms and Conditions</a>
-										</label>                        
-									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Daftar</button>
+										<button class="btn btn-action" type="submit">Edit</button>
 									</div>
 								</div>
 							</form>
@@ -201,9 +165,9 @@
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/custom.js"></script>
+	<script src="{{ asset('assets/js/headroom.min.js') }}"></script>
+	<script src="{{ asset('assets/js/jQuery.headroom.min.js') }}"></script>
+	<script src="{{ asset('assets/js/custom.js') }}"></script>
 	
 </body>
 </html>

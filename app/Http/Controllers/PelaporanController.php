@@ -88,8 +88,9 @@ class PelaporanController extends Controller
             'isi_laporan'   => 'required',
             'tanggal'       => 'required',
             'waktu'         => 'required',
+            'image'         => 'image|file|max:1024',
         ]);
-
+// -------------------------create--------------------------------
         DB::table('pelaporan')->insert([
         'FK_Id_bencana'     => $validatedData['id_bencana'],
         'FK_Id_kecamatan'   => $validatedData['id_kecamatan'],
@@ -99,6 +100,7 @@ class PelaporanController extends Controller
         'tgl_bencana'       => $validatedData['tanggal'],
         'waktu_bencana'     => $validatedData['waktu'],
         'status'            => 0,
+        'image'             => $validatedData['image'],
         ]);
         
         return redirect('/histori');
@@ -152,7 +154,7 @@ class PelaporanController extends Controller
             'tanggal'       => 'required',
             'waktu'         => 'required',
         ]);
-
+// -------------------------update--------------------------------
         DB::table('pelaporan')->where('id',$request->id)->update([
             'FK_Id_bencana'     => $validatedData['id_bencana'],
             'FK_Id_kecamatan'   => $validatedData['id_kecamatan'],
