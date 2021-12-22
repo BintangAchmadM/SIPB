@@ -9,6 +9,7 @@ use App\Models\Pelaporan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 class PelaporanController extends Controller
 {
     /**
@@ -79,6 +80,8 @@ class PelaporanController extends Controller
      */
     public function store(Request $request)
     {
+        
+        //return $request->file('image')->store('post-image');
 
         $validatedData = $request->validate([
             'id_bencana'    => 'required',
@@ -90,6 +93,35 @@ class PelaporanController extends Controller
             'waktu'         => 'required',
             'image'         => 'image|file|max:1024',
         ]);
+// -------------------------Picture--------------------------------
+
+        // $img = $validatedData['image'];
+        // $fileName = $img->getClientOriginalName();
+        // $img = str_replace('data:image/png;base64','', $img);
+
+        // $img = base64_decode($img);
+
+        // Storage::disk('public')-> put($fileName, $img);
+
+// -----------------------------------------------------------------
+$file = $request->file('image');
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $file->move($target_dir,$file->getClientOriginalName());
+        // Check if image file is a actual image or fake image
+        if(isset($_POST["submit"])) {
+          $check = getimagesize($_FILES["image"]["tmp_name"]);
+          if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+          } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+          }
+        };
+
 // -------------------------create--------------------------------
         DB::table('pelaporan')->insert([
         'FK_Id_bencana'     => $validatedData['id_bencana'],
@@ -100,10 +132,15 @@ class PelaporanController extends Controller
         'tgl_bencana'       => $validatedData['tanggal'],
         'waktu_bencana'     => $validatedData['waktu'],
         'status'            => 0,
-        'image'             => $validatedData['image'],
+        
+        //  'image'             => $fileName,
+        'image'             => basename($_FILES["image"]["name"]),
+        
         ]);
         
-        return redirect('/histori');
+    
+    return redirect('/histori');
+
     }
 
     /**
@@ -132,7 +169,8 @@ class PelaporanController extends Controller
             'report' => Pelaporan::find($id),
             'bencana' => $bencana,
             'kecamatan' => $kecamatan,
-            'title' => $id
+            'title' => $id,
+            'image' => $_FILES,
         ]);
     }
 
@@ -153,7 +191,32 @@ class PelaporanController extends Controller
             'isi_laporan'   => 'required',
             'tanggal'       => 'required',
             'waktu'         => 'required',
+            'image'         => 'image|file|max:1024',
         ]);
+
+
+
+
+
+
+        $file = $request->file('image');
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["image"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $file->move($target_dir,$file->getClientOriginalName());
+        // Check if image file is a actual image or fake image
+        if(isset($_POST["submit"])) {
+          $check = getimagesize($_FILES["image"]["tmp_name"]);
+          if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+          } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+          }
+        };
+
 // -------------------------update--------------------------------
         DB::table('pelaporan')->where('id',$request->id)->update([
             'FK_Id_bencana'     => $validatedData['id_bencana'],
@@ -164,6 +227,7 @@ class PelaporanController extends Controller
             'tgl_bencana'       => $validatedData['tanggal'],
             'waktu_bencana'     => $validatedData['waktu'],
             'status'            => 0,
+            'image'             => basename($_FILES["image"]["name"]),
         ]);
         return redirect('/histori');
     }

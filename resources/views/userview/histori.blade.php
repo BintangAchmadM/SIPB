@@ -58,7 +58,9 @@
 					Declined    
 					@endif
 				</td>
-				<td> {{ $reports ->image }}</td>
+				
+				<td><img src="uploads/{{ $reports->image }}" style="width: 50px;"></td>
+				
 				<td><a href="{{ url("/histori-") }}{{ $reports->id }}">
 					<button class="btn btn-warning btn-block" type="submit">Edit</button>
 					</a>
