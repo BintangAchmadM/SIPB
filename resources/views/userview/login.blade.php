@@ -50,7 +50,7 @@
 										<button class="btn btn-action" type="submit">Sign in</button>
 									</div>
 									<div class="col-lg-8">
-										<b>Don't have an account ? <a href="daftar">Sign Up</a></b>
+										<b>Dont have an account ? <a href="daftar">Sign Up</a></b>
 									</div>
 								</div>
 							</form>
