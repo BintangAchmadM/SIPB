@@ -9,12 +9,22 @@
                     <div class="card shadow-lg border-0 rounded-lg mt-5">
                         <div class="card-header"><h3 class="text-center font-weight-light my-4">Tambah {{ $title }}</h3></div>
                         <div class="card-body">
-                            <form action="/create-provinsi" method="post">
+                            <form action="/create-bencana" method="post">
                                 @csrf
                                 <div class="row mb-2">
                                     <div class="col-md-6">
-                                        <input class="form-control @error('nama_provinsi') is-invalid @enderror" id="inputName" name="nama_provinsi" type="text" maxlength="50" placeholder="Provinsi" value="{{ old('nama_provinsi') }}" required/>
-                                        @error('nama_provinsi')
+                                        <select class="form-select" aria-label="Default select example" name='id_katben'>
+                                            <option selected>Pilih Ketegori</option>
+                                            @foreach ($category as $categories)
+                                                <option value="{{ $categories->id }}">{{ $categories->Kategori_Bencana }}</option> 
+                                            @endforeach
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-6">
+                                        <input class="form-control @error('nama_kecamatan') is-invalid @enderror" id="inputName" name="nama_bencana" type="text" maxlength="50" placeholder="Bencana" value="{{ old('nama_bencana') }}" required/>
+                                        @error('nama_bencana')
                                             <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>

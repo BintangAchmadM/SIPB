@@ -23,7 +23,8 @@ class PelaporanController extends Controller
            'report' => Pelaporan::where('status','0')->orderBy('tgl_bencana', 'desc')->get(),
            'bencana' => Bencana::all(),
            'kecamatan' => Kecamatan::all(),
-           'title' => 'Incoming Report'
+           'title' => 'Incoming Report',
+           'counter' => 1
         ]);
     }
 
@@ -50,8 +51,9 @@ class PelaporanController extends Controller
     public function approved()
     {
         return view('dashboardview.table-pelaporan-disetujui', [
-            'report' => Pelaporan::where('status','1')->get(),
-            'title' => 'Approved Report'
+            'report' => Pelaporan::where('status','1')->orderBy('tgl_bencana', 'desc')->get(),
+            'title' => 'Approved Report',
+            'counter' => 1
          ]);
     }
 
@@ -149,9 +151,12 @@ $file = $request->file('image');
      * @param  \App\Models\Pelaporan  $pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function show(Pelaporan $pelaporan)
+    public function show($id)
     {
-        //
+        return view('dashboardview.show-detail', [
+            'report'=> Pelaporan::find($id),
+            'title' => 'Detail'
+        ]);
     }
 
     /**
@@ -270,5 +275,13 @@ $file = $request->file('image');
             ->update(['status' => '2']);
 
         return redirect('/dashboard-table-report')->with('declined','Laporan Ditolak');
+    }
+
+    public function unapprove($id){
+        DB::table('pelaporan')
+            ->where('id', $id)
+            ->update(['status' => '0']);
+
+        return redirect('/dashboard-table-approved')->with('unapprove','Laporan Batal Disetujui');
     }
 }
