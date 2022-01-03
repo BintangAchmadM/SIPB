@@ -83,8 +83,6 @@ class PelaporanController extends Controller
     public function store(Request $request)
     {
         
-        //return $request->file('image')->store('post-image');
-
         $validatedData = $request->validate([
             'id_bencana'    => 'required',
             'id_kecamatan'  => 'required',
@@ -95,34 +93,15 @@ class PelaporanController extends Controller
             'waktu'         => 'required',
             'image'         => 'image|file|max:1024',
         ]);
-// -------------------------Picture--------------------------------
-
-        // $img = $validatedData['image'];
-        // $fileName = $img->getClientOriginalName();
-        // $img = str_replace('data:image/png;base64','', $img);
-
-        // $img = base64_decode($img);
-
-        // Storage::disk('public')-> put($fileName, $img);
 
 // -----------------------------------------------------------------
 $file = $request->file('image');
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
-        $uploadOk = 1;
+       
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $file->move($target_dir,$file->getClientOriginalName());
-        // Check if image file is a actual image or fake image
-        if(isset($_POST["submit"])) {
-          $check = getimagesize($_FILES["image"]["tmp_name"]);
-          if($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
-            $uploadOk = 1;
-          } else {
-            echo "File is not an image.";
-            $uploadOk = 0;
-          }
-        };
+        
 
 // -------------------------create--------------------------------
         DB::table('pelaporan')->insert([
@@ -134,8 +113,6 @@ $file = $request->file('image');
         'tgl_bencana'       => $validatedData['tanggal'],
         'waktu_bencana'     => $validatedData['waktu'],
         'status'            => 0,
-        
-        //  'image'             => $fileName,
         'image'             => basename($_FILES["image"]["name"]),
         
         ]);
@@ -207,20 +184,10 @@ $file = $request->file('image');
         $file = $request->file('image');
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
-        $uploadOk = 1;
+        
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $file->move($target_dir,$file->getClientOriginalName());
-        // Check if image file is a actual image or fake image
-        if(isset($_POST["submit"])) {
-          $check = getimagesize($_FILES["image"]["tmp_name"]);
-          if($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
-            $uploadOk = 1;
-          } else {
-            echo "File is not an image.";
-            $uploadOk = 0;
-          }
-        };
+       
 
 // -------------------------update--------------------------------
         DB::table('pelaporan')->where('id',$request->id)->update([

@@ -56,10 +56,10 @@
 							   <select class="form-control @error('id_bencana') is-invalid @enderror" name="id_bencana" required>
 									<option value='' disabled selected hidden>Pilih Bencana</option>
 									@foreach ($bencana as $bencanas)
-										@if (old('id_bencana') == $bencanas->id_bencana)
-											<option value={{ $bencanas->id_bencana }} selected>{{ $bencanas->Nama_bencana }}</option>
+										@if (old('id_bencana') == $bencanas->id)
+											<option value={{ $bencanas->id }} selected>{{ $bencanas->Nama_bencana }}</option>
 										@else
-											<option value={{ $bencanas->id_bencana }} >{{ $bencanas->Nama_bencana }}</option>
+											<option value={{ $bencanas->id }} >{{ $bencanas->Nama_bencana }}</option>
 										@endif
 									@endforeach
 							   </select>
