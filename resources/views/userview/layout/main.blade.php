@@ -41,7 +41,7 @@
 					<li class="{{ ($title === 'About') ? 'active' : '' }}"><a href = 'about'>About</a></li>
                     
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href='artikel'>Daftar Bencana</a></li>
 							<li><a href="#">Pencegahan</a></li>
@@ -53,7 +53,7 @@
 					</li>
                     @auth
                     <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hai, {{ auth()->user()->nama_user }} <b class="caret"></b></a>
+						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Hai, {{ auth()->user()->nama_user }} <b class="caret"></b></a>
 						<ul class="dropdown-menu">
                             <li class="text-center"><a href=''>Profile</a></li>
 							@can('adminpetugas')
