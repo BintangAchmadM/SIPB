@@ -41,10 +41,10 @@
 					<li class="{{ ($title === 'About') ? 'active' : '' }}"><a href = 'about'>About</a></li>
                     
 					<li class="dropdown">
-						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href='artikel'>Daftar Bencana</a></li>
-							<li><a href="#">Pencegahan</a></li>
+							{{--  <li><a href="#">Pencegahan</a></li>  --}}
 							@auth
 								<li><a href='/laporan'>Buat Laporan</a></li>
 								<li><a href='/histori'>Laporan Saya</a></li>

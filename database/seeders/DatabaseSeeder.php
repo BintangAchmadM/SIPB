@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         ]);
         
         \App\Models\Provinsi::factory(10)->create();
-     
+        
         \App\Models\Kota::factory(30)->create();
         
         \App\Models\Kecamatan::factory(50)->create();
